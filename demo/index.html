@@ -1,0 +1,79 @@
+<!DOCTYPE html >
+
+<html>
+ <head>
+     <title>Conference </title>
+    </head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+     <!--######################################### cdn dependency  #################################################################-->
+     
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!--######################################## library depency ####################################################################-->
+    <script src="../dependency/strophe.min.js"></script>
+    <script src="../dependency/strophe.disco.min.js"></script>
+    <script src="../dependency/lib-jitsi-meet.min.js"></script>
+    <script src="../conference-lib.js">
+    
+    </script>
+    
+    <!--###################################### custom style #########################################################################-->
+   <style>
+     #conference{
+         top:0px;
+         left:0px;
+         width: 100%;
+         height: 80%;
+         background-color: #2f3640;
+         position: absolute;
+     }
+
+     #controller{
+         bottom: 0px;
+         left:0px;
+         height:20%;
+         width: 100%;
+         position: absolute;
+     }
+   
+   </style>
+
+
+
+    <body>
+    <h1 style="text-align: center;color: white;position: absolute;">Demo video Conference</h1>
+
+    <!--######################################## conference UI will add here in run-time ############################################-->
+    <div id="conference" >
+
+    </div>
+    <br/>
+
+    <!--######################################### conference controller #############################################################-->
+      <div id="controller">
+          <button class="btn btn-primary" id="start-button" style="padding: 20px;">Start Conference</button>
+      </div>
+
+    </body>
+
+    <!--######################################### configuration ###################################################################-->
+
+    <script>
+    $(document).ready(function(){
+        conferenceUI("conference");
+     $("#start-button").click(function(){
+         console.log("abc");
+         startConference();
+     });
+     });
+     
+    </script>
+
+
+</html>
