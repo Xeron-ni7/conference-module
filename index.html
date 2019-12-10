@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+ <head>
+    <title > video test</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="room.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!--       <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+
+       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+     
+      <script src="strophe/strophe.min.js"></script>
+    <script src="strophe/strophe.disco.min.js"></script>
+    <script src="lib-jitsi-meet.min.js"></script>
+     <script src="video-controller.js"></script>
+        
+    
+    </head>
+    
+    
+    <body>
+     <div class="black-room" id="black-room">
+         <div class="video-box" id="local-video" style="width: 10%;left:90%;top:10%">
+         <video id="local" autoplay="1">
+           <source src="abc.mp4"  type="video/mp4">
+           </video>
+           <button class="btn btn-outline-secondary hbtn" style="z-index: 99;height:40%;position:absolute;bottom:15px;margin-left: -20%" onclick="Mute()" ><img src="icons/mute.png" width="16 auto"/></button>
+            <button class="btn btn-outline-danger hbtn" style="z-index: 99;position:absolute;height:bottom:15px;margin-left: 5%"  onclick="Remove()" ><img src="icons/close.png" width="10 auto"/></button>
+        </div>
+
+         <div id="remoteVideos">
+         
+         
+         
+         </div>
+         
+         
+         <!--
+        <div class="video-box">
+         <video id="video1">
+            <source src="abc.mp4"  type="video/mp4">
+            
+            </video>
+            <button class="btn btn-outline-secondary" style="z-index: 99;position:absolute;bottom:5px;" ><img src="icons/mute.png" width="24 auto"/></button>
+            <button class="btn btn-outline-danger" style="z-index: 99;position:absolute;bottom:5px;margin-left: 64px" ><img src="icons/close.png" width="24 auto"/></button>
+        </div>
+-->
+        </div>
+    <div class="video-controller-panel">
+        <div class="video-controller">
+        <button onclick="Start()">play</button>
+        <button onclick="Mute()">mute</button>
+        </div>
+        
+        </div>
+    
+    </body>
+       <script src="jitsi-lib.js"></script>
+
+</html>
