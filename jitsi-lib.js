@@ -1,11 +1,11 @@
 const option={
     hosts:{
-    domain:"192.168.0.149",
-    muc:"conference.192.168.0.149",
-    anonymousdomain:"guest.192.168.0.149",
+    domain:"192.168.0.150",
+    muc:"conference.192.168.0.150",
+    anonymousdomain:"192.168.0.150",
     //VirtualHost:"guest.192.168.0.149"
 },
-      bosh:"https://192.168.0.149/http-bind"
+      bosh:"https://192.168.0.150/http-bind"
 };
 
 const confOption={
@@ -51,13 +51,15 @@ const onLocalTracks=(tracks)=> {
 const onConnectionSuccess=()=>{
 
     alert("--------------------------------connected");
-    room=connection.initJitsiConference("new3",confOption);
+    room=connection.initJitsiConference("new1000",confOption);
     room.on(
         JitsiMeetJS.events.conference.CONFERENCE_JOINED,
         onConferenceJoined);
         room.on(JitsiMeetJS.events.conference.TRACK_ADDED, onRemoteTrack);
 
-        room.join("123456");
+        room.join();
+
+        alert(room.myUserId());
 }
 
 

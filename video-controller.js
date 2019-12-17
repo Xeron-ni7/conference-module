@@ -24,6 +24,7 @@ function filterMember(id){
  function addMember(data){
      if(filterMember(data.id).length===0)
         {
+            alert(data.id);
             members.push(data);
             $(`#${data.id}`).draggable();
             addVideos();

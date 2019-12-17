@@ -13,4 +13,7 @@ let options={
     bosh :"https://192.168.0.150/http-bind"
 };
 
-const confOption=
+const confOption={
+    openBridgeChannel: true
+};
+

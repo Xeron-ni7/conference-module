@@ -11,11 +11,9 @@ const confOption={
     openBridgeChannel : true
 };
 
-
 let connection=null;
 let isJoined=false;
 let room=null;
-
 
 let localTrack=[];
 const remoteTracks={};
